@@ -1,7 +1,11 @@
 /* eslint-disable no-restricted-syntax */
 import Router from 'koa-router';
 
-const FOLDERS = await Promise.all([import('./users/index.js')]);
+const FOLDERS = await Promise.all([
+  import('./admin/index.js'),
+  import('./posts/index.js'),
+  import('./users/index.js'),
+]);
 
 const ROUTER = new Router();
 

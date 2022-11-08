@@ -1,2 +1,2 @@
-// eslint-disable-next-line import/prefer-default-export
 export { default as User } from './users.js';
+export { default as Post } from './posts.js';

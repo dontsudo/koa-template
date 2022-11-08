@@ -2,7 +2,7 @@ import Redis from 'ioredis';
 import blake3 from 'blake3';
 import logger from './logger.js';
 
-export const redis = process.env.REDIS_URL
+const redis = process.env.REDIS_URL
   ? new Redis(process.env.REDIS_URL)
   : new Redis();
 
@@ -17,10 +17,11 @@ redis
   })
   .on('ready', () => {
     isRedisAvailable = true;
-    logger.info('REDIS Connected');
+    logger.info('🔗 Redis connected');
   });
 
 /**
+ * hash function for redis key
  *
  * @param   {String}    str String to hash
  * @returns {String}    Hashed String
@@ -99,3 +100,5 @@ const cacheHandler = (ttl) => async (ctx, next) => {
 };
 
 export default cacheHandler;
+
+export { redis };

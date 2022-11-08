@@ -5,7 +5,6 @@
   "scripts": {
     "test": "jest --silent --verbose",
     "start": "node ./app/server.js",
-    "dev": "NODE_ENV=development nodemon",
     "lint": "eslint ."
   },
   "keywords": [],

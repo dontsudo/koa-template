@@ -8,6 +8,11 @@ const userSchema = new mongoose.Schema(
       type: String,
       default: null,
     },
+    email: {
+      type: String,
+      required: true,
+      unique: true,
+    },
     key: {
       type: String,
       required: true,
@@ -20,6 +25,12 @@ const userSchema = new mongoose.Schema(
   },
   { autoCreate: true },
 );
+
+const index = {
+  name: 'text',
+  email: 'text',
+};
+userSchema.index(index);
 
 userSchema.plugin(mongoosePaginate);
 userSchema.plugin(idPlugin);

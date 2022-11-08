@@ -4,10 +4,11 @@ const db = mongoose.connection.useDb('auth', { useCache: true });
 
 /**
  * Auth Middleware
+ *
  * @param {Object}   ctx  Next context
  * @param {Function} next Next function
  */
-const authHandler = async (ctx, next) => {
+export default async (ctx, next) => {
   const key = ctx.request.headers['api-key'];
   if (key) {
     const user = await db.collection('users').findOne({ key });
@@ -20,5 +21,3 @@ const authHandler = async (ctx, next) => {
   ctx.status = 401;
   ctx.body = 'https://youtu.be/RfiQYRn7fBg';
 };
-
-export default authHandler;

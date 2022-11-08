@@ -1,5 +1,0 @@
-{
-  "watch": ["./app"],
-  "ignore": ["./tests/*"],
-  "exec": "node app/index.js --watch"
-}

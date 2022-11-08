@@ -2,7 +2,7 @@ import http from 'http';
 import mongoose from 'mongoose';
 
 import app from './index.js';
-import { logger } from './middleware/index.js';
+import { logger } from './middlewares/index.js';
 
 const PORT = process.env.PORT ?? 3000;
 const server = http.createServer(app.callback());
@@ -19,7 +19,7 @@ const gracefulShutdown = (msg) => {
 };
 
 server.listen(PORT, '0.0.0.0', () => {
-  logger.info(`🚀 RUNNING ON PORT: ${PORT}`);
+  logger.info(`✨ Running on port: ${PORT}`);
 
   /**
    * Handle Kill Commands
