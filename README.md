@@ -1,6 +1,10 @@
 # koa-rest-api-template
 
-![Test](https://github.com/wannavi/koa-rest-api-template/workflows/Continuous%20Integration%20and%20Delivery/badge.svg?branch=main)
+![Test](https://github.com/wannavi/koa-rest-api-template/actions/workflows/deploy.yml/badge.svg)
+
+
+
+
 
 - Koa.js
 - ESM Module
