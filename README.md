@@ -1,6 +1,6 @@
 # koa-rest-api-template
 
-![Test](https://github.com/wannavi/koa-rest-api-template/actions/workflows/deploy.yml/badge.svg)
+![Test](https://github.com/wannavi/koa-rest-api-template/actions/workflows/docker-build-push.yml/badge.svg)
 
 
 
