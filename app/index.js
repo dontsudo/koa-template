@@ -1,5 +1,6 @@
+import 'dotenv/config';
+
 import cors from 'koa2-cors';
-import dotenv from 'dotenv';
 import mongoose from 'mongoose';
 import helmet from 'koa-helmet';
 import Koa from 'koa';
@@ -7,8 +8,6 @@ import bodyParser from 'koa-bodyparser';
 
 import { error, logger, responseTime } from './middlewares/index.js';
 import routes from './routes/index.js';
-
-dotenv.config();
 
 const app = new Koa();
 

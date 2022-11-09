@@ -1,0 +1,13 @@
+{
+  "serviceName": "koa-rest-api-service",
+  "taskDefinition": "koa-rest-api-td:5",
+  "desiredCount": 2,
+  "loadBalancers": [
+    {
+      "targetGroupArn": "arn:aws:elasticloadbalancing:ap-northeast-2:140608817702:targetgroup/koa-rest-api-load-balancer/71cd54addfba46f2",
+      "containerName": "koa-rest-api",
+      "containerPort": 3000
+    }
+  ],
+  "role": "arn:aws:iam::140608817702:role/aws-service-role/ecs.amazonaws.com/AWSServiceRoleForECS"
+}

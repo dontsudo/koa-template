@@ -1,0 +1,35 @@
+{
+  "family": "koa-rest-api-td",
+  "networkMode": "bridge",
+  "containerDefinitions": [
+    {
+      "name": "koa-rest-api",
+      "essential": true,
+      "image": "140608817702.dkr.ecr.ap-northeast-2.amazonaws.com/koa-rest-api:v0.1",
+      "cpu": 0,
+      "memory": 128,
+      "portMappings": [
+        {
+          "hostPort": 0,
+          "containerPort": 3000,
+          "protocol": "tcp"
+        }
+      ],
+      "environment": [
+        {
+          "name": "MONGO_URL",
+          "value": "ENTER YOURS"
+        }
+      ],
+      "logConfiguration": {
+        "logDriver": "awslogs",
+        "options": {
+          "awslogs-create-group": "true",
+          "awslogs-group": "awslogs-ecs-task",
+          "awslogs-region": "ap-northeast-2",
+          "awslogs-stream-prefix": "awslogs-example"
+        }
+      }
+    }
+  ]
+}
